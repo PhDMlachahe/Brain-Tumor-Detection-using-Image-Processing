@@ -18,17 +18,17 @@ For an in-depth understanding, refer to my articles detailing the journey and fi
 
 Our methodology unfolds in a structured process aimed at improving the precision of tumor identification from MRI images. Key steps include:
 
-1. **Data Acquisition**: The dataset comprises 80 brain MRI images sourced from Kaggle, but for this study, we focused exclusively on 8 tumorous images to refine our segmentation techniques.
-2. **Preprocessing**:
+1. 🩻 **Data Acquisition**: The dataset comprises 80 brain MRI images sourced from Kaggle, but for this study, we focused exclusively on 8 tumorous images to refine our segmentation techniques.
+2. 🧼 **Preprocessing**:
   - **Anisotropic Diffusion Filtering**: to reduce noise while preserving important edge details, ensuring that the crucial information is retained for accurate segmentation.
    - **Skull Stripping**: to isolate the brain tissue from the MRI images by removing non-brain tissues, allowing for a focused analysis on the tumor areas.
    - **Contrast Enhancement**: to improve the visibility of tumor regions against the surrounding tissues, making the tumors more distinguishable, by using Histogram Equalization (HE).
    - **Top-hat Filtering**: to highlight small bright structures, such as tumors, against a dark background, further improving the clarity of tumor regions.
    - **Binarization**: to convert grayscale images to binary format, simplifying the image by focusing on the most relevant information for tumor identification. This step involves setting a threshold to retain pixels with intensities that signify tumor presence.
-3. **Segmentation**:
+3. ✂️ **Segmentation**:
   - **Watershed Segmentation**: to accurately delineate tumor boundaries within the preprocessed images. This region-based segmentation method is crucial for separating adjacent objects in the image, especially in areas where the boundary between the tumor and normal brain tissue is not clearly defined.
   - **Morphological Operations**: to refine the results of segmentation, smoothing the edges of the segmented tumor, removing small artifacts, and filling in gaps within the tumor region.
-9. **Performance Evaluation**: to measures various statistical and textural metrics such as Mean intensity, Entropy, Smoothness, RMS, PSNR, and GLCM features (Contrast, Correlation, Energy, Homogeneity)
+9. 📊 **Performance Evaluation**: to measures various statistical and textural metrics such as Mean intensity, Entropy, Smoothness, RMS, PSNR, and GLCM features (Contrast, Correlation, Energy, Homogeneity)
 
 ![diagram](method_diagram.png)
 
@@ -38,9 +38,15 @@ The entire process emphasizes preserving crucial image details while significant
 
 Our findings demonstrate notable enhancements in the processed MRI images at each stage of the applied methodology.
 
-![visualization_steps_A](visualization_steps_A.png)
-![visualization_steps_B](visualization_steps_B.png)
-![visualization_steps_C](visualization_steps_C.png)
+<p align="center">
+  <img src="visualization_steps_A.png" alt="visualization_steps_A"/>
+</p>
+<p align="center">
+  <img src="visualization_steps_B.png" alt="visualization_steps_B"/>
+</p>
+<p align="center">
+  <img src="visualization_steps_C.png" alt="visualization_steps_C"/>
+</p>
 
 ## Conclusion
 
