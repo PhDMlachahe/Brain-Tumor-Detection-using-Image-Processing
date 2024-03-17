@@ -15,22 +15,38 @@ The primary objective of this project is to enhance the accuracy of brain tumor 
 
 Our methodology unfolds in a structured process aimed at improving the precision of tumor identification from MRI images. Key steps include:
 
-1. **Data Acquisition**: Utilizing a dataset of 80 brain MRI images from Kaggle, focusing on tumorous images to refine our segmentation techniques.
-2. **Preprocessing**: Applying ADF for noise reduction, skull stripping to isolate brain tissue, and contrast enhancement to improve tumor visibility.
-3. **Binarization**: Simplifying the image processing by converting grayscale images into binary, focusing on the most relevant information for tumor identification.
-4. **Segmentation**: Employing the Watershed algorithm for effective segmentation, followed by morphological operations to refine tumor boundaries.
-5. **Performance Evaluation**: Quantitative assessment using metrics such as SSIM, PSNR, and GLCM features to evaluate the accuracy and efficiency of the proposed method.
+1. **Data Acquisition**: Collection of 80 brain MRI images from Kaggle, focusing on images with tumors to refine our segmentation techniques.
+2. **Preprocessing**:
+  - **Anisotropic Diffusion Filtering**: to reduce noise while preserving important edge details, ensuring that the crucial information is retained for accurate segmentation.
+   - **Skull Stripping**: to isolate the brain tissue from the MRI images by removing non-brain tissues, allowing for a focused analysis on the tumor areas.
+   - **Contrast Enhancement**: to improve the visibility of tumor regions against the surrounding tissues, making the tumors more distinguishable, by using Histogram Equalization (HE).
+   - **Top-hat Filtering**: to highlight small bright structures, such as tumors, against a dark background, further improving the clarity of tumor regions.
+   - **Binarization**: to convert grayscale images to binary format, simplifying the image by focusing on the most relevant information for tumor identification. This step involves setting a threshold to retain pixels with intensities that signify tumor presence.
+3. **Segmentation**:
+  - **Watershed Segmentation**: to accurately delineate tumor boundaries within the preprocessed images. This region-based segmentation method is crucial for separating adjacent objects in the image, especially in areas where the boundary between the tumor and normal brain tissue is not clearly defined.
+  - **Morphological Operations**: to refine the results of segmentation, smoothing the edges of the segmented tumor, removing small artifacts, and filling in gaps within the tumor region.
+9. **Performance Evaluation**: to measures encompass various statistical and textural metrics such as Mean intensity, Entropy, Smoothness, RMS, PSNR, and GLCM features (Contrast, Correlation, Energy, Homogeneity)
+
+![Graph](method_diagram.png)
 
 The entire process emphasizes preserving crucial image details while significantly reducing noise, thereby enabling more accurate segmentation and identification of tumor regions.
 
 ## RESULTS & DISCUSSION
 
-Our findings demonstrate notable enhancements in the processed MRI images at each stage of the applied methodology. Quantitative evaluations reveal high levels of accuracy, as evidenced by performance metrics like SSIM, PSNR, and enhanced image features via GLCM analysis. These results underscore the effectiveness of combining ADF and Watershed Segmentation in distinguishing between tumorous and healthy tissues, significantly outperforming existing methods in terms of accuracy and processing speed.
+Our findings demonstrate notable enhancements in the processed MRI images at each stage of the applied methodology.
 
-Moreover, the integration of textural features with machine learning classifiers emerges as a promising direction for future research, suggesting potential for even more refined tumor detection capabilities.
+![Graph](visualization_steps_A.png)
 
 ## CONCLUSION
 
 This project successfully demonstrates an advanced methodology for the detection and segmentation of brain tumors in MRI scans, with significant implications for improving diagnostic accuracy and treatment outcomes. The synergy of Anisotropic Diffusion Filtering and Watershed Segmentation, complemented by a thorough performance evaluation, establishes a solid foundation for future advancements in medical imaging and diagnostics.
 
-The promising results, particularly in texture analysis using the GLCM, pave the way for integrating these methodologies with artificial intelligence to develop more sophisticated diagnostic tools. Our research invites further validation across diverse datasets, aiming to solidify its applicability and effectiveness in real-world medical settings.
+Moreover, the integration of textural features with machine learning classifiers emerges as a promising direction for future research, suggesting potential for even more refined tumor detection capabilities.  Our research invites further validation across diverse datasets, aiming to solidify its applicability and effectiveness in real-world medical settings.
+
+## Contact #
+
+If you have any questions or would like to connect:
+
+- 📬 Email me at [mlachahe.saidsalimo@gmail.com](mailto:mlachahe.saidsalimo@gmail.com)
+- 🟦 Connect with me on [LinkedIn](https://www.linkedin.com/in/mlachahesaidsalimo/)
+- ⬛ Read my thoughts on [Medium](https://medium.com/@mlachahesaidsalimo)
