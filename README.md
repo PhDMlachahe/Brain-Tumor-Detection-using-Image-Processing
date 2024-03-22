@@ -1,8 +1,8 @@
 <div align="center">
-<h1 align="center">MRI Analysis for Brain Tumor Detection</h1>
+<h1 align="center">Brain Tumor Detection using Image Processing</h1>
 
   <p align="center">
-    A combined methodology using Anisotropic Diffusion and Watershed Segmentation
+    An approach through Anisotropic Diffusion and Watershed Segmentation
   </p>
 
 </div>
