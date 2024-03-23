@@ -2,7 +2,7 @@
 <h1 align="center">Brain Tumor Detection using Image Processing</h1>
 
   <p align="center">
-    An approach through Anisotropic Diffusion and Watershed Segmentation
+    An approach through Anisotropic Diffusion, Top-hat Filtering, Histogram Equalization and Watershed Segmentation
   </p>
 
 </div>
@@ -12,7 +12,7 @@
 The primary objective of this project is to enhance the accuracy of brain tumor detection from Magnetic Resonance Imaging (MRI) scans. Leveraging advanced image processing techniques, specifically Anisotropic Diffusion Filtering (ADF) and Watershed Segmentation, this research seeks to provide a robust tool for early detection and accurate segmentation of brain tumors, thereby facilitating timely and effective treatment strategies.
 
 For an in-depth understanding, refer to my articles detailing the journey and findings:
-- 🇬🇧 [MRI Analysis for Brain Tumor Detection](https://medium.com/wanabilini/sur-la-route-de-loptimum-recuit-simulé-pour-le-tsp-9cb037e74979)
+- 🇬🇧 [📰 Brain Tumor Detection using Image Processing](https://medium.com/wanabilini/brain-tumor-detection-using-image-processing-a26b1c927d5d)
 
 ## Methodology
 
@@ -30,7 +30,9 @@ Our methodology unfolds in a structured process aimed at improving the precision
   - **Morphological Operations**: to refine the results of segmentation, smoothing the edges of the segmented tumor, removing small artifacts, and filling in gaps within the tumor region.
 9. 📊 **Performance Evaluation**: to measures various statistical and textural metrics such as Mean intensity, Entropy, Smoothness, RMS, PSNR, and GLCM features (Contrast, Correlation, Energy, Homogeneity)
 
-![diagram](method_diagram.png)
+<p align="center">
+  <img src="method_diagram.png" alt="method_diagram"/>
+</p>
 
 The entire process emphasizes preserving crucial image details while significantly reducing noise, thereby enabling more accurate segmentation and identification of tumor regions.
 
@@ -47,12 +49,27 @@ Our findings demonstrate notable enhancements in the processed MRI images at eac
 <p align="center">
   <img src="visualization_steps_C.png" alt="visualization_steps_C"/>
 </p>
+<p align="center">
+  <img src="visualization_steps_D.png" alt="visualization_steps_D"/>
+</p>
+<p align="center">
+  <img src="visualization_steps_E.png" alt="visualization_steps_E"/>
+</p>
+<p align="center">
+  <img src="visualization_steps_F.png" alt="visualization_steps_F"/>
+</p>
+<p align="center">
+  <img src="visualization_steps_G.png" alt="visualization_steps_G"/>
+</p>
+<p align="center">
+  <img src="visualization_steps_H.png" alt="visualization_steps_H"/>
+</p>
 
 ## Conclusion
 
-This project successfully demonstrates an advanced methodology for the detection and segmentation of brain tumors in MRI scans, with significant implications for improving diagnostic accuracy and treatment outcomes. The synergy of Anisotropic Diffusion Filtering and Watershed Segmentation, complemented by a thorough performance evaluation, establishes a solid foundation for future advancements in medical imaging and diagnostics.
+This project, conducted with Python and scikit-image, successfully demonstrates the effectiveness of advanced image processing techniques in the segmentation of brain tumors from MRI scans, opening avenues for their use in various other medical and non-medical applications.
 
-Moreover, the integration of textural features with machine learning classifiers emerges as a promising direction for future research, suggesting potential for even more refined tumor detection capabilities.  Our research invites further validation across diverse datasets, aiming to solidify its applicability and effectiveness in real-world medical settings.
+Moreover, the integration of textural features with machine learning classifiers emerges as a promising direction for future research. Our work invites further validation across diverse datasets, aiming to solidify its applicability and effectiveness in real-world medical settings.
 
 ## Contact #
 
